@@ -1,5 +1,3 @@
-/*	Question Set 1 - Easy */
-
 /* Q1: Who is the senior most employee based on job title? */
 
 SELECT TOP 1 title, last_name, first_name 
@@ -41,8 +39,6 @@ FROM customer
 JOIN invoice ON customer.customer_id = invoice.customer_id
 GROUP BY customer.customer_id, customer.first_name, customer.last_name
 ORDER BY total_spending DESC
-
-
 
 
 /* Q6: Write query to return the email, first name, last name, & Genre of all Rock Music listeners. 
@@ -87,8 +83,6 @@ WHERE milliseconds > (
 ORDER BY milliseconds DESC;
 
 
-
-
 /* Q9: We want to find out the most popular music Genre for each country. We determine the most popular genre as the genre 
 with the highest amount of purchases. Write a query that returns each country along with the top Genre. For countries where 
 the maximum number of purchases is shared return all Genres. */
@@ -108,7 +102,6 @@ WITH popular_genre AS
 	ORDER BY 2 ASC, 1 DESC
 )
 SELECT * FROM popular_genre WHERE RowNo <= 1
-
 
 
 /* Q10: Write a query that determines the customer that has spent the most on music for each country. 
